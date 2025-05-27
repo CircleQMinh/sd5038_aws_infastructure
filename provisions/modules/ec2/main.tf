@@ -40,9 +40,9 @@ resource "aws_security_group" "sg" {
 } 
 
 
-resource "aws_instance" "devops_eks" {
+resource "aws_instance" "devops_eks_2" {
   ami           = "ami-09f4814ae750baed6"
-  instance_type = "t2.micro"
+  instance_type = "t3.small"
   key_name      = "devops_eks_key"
   security_groups = [aws_security_group.sg.name]
   tags = {
